@@ -1,4 +1,4 @@
-package net.emullen;
+package net.emullen.Socketed;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,10 @@ import java.io.PrintWriter;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+
+import net.emullen.Encryption;
+import net.emullen.Message;
+import net.emullen.ProgArgs;
 
 /** The server side makes a ServerSocket and accepts a single socket connection at a time.
  *  Once the server connects to a client socket, the server will expect a message to either encrypt

@@ -14,6 +14,7 @@ public class ProgArgs {
     private String address;
     private int port;
     private boolean encrypt;
+    private boolean connectionless;
 
     public ProgArgs(String[] args) {
         uncaughtArgs = new ArrayList<>();
@@ -22,6 +23,7 @@ public class ProgArgs {
         address = "localhost";
         port = 444;
         encrypt = true;
+        connectionless = false;
         
         // Parse arguments
         String argName = null;
@@ -71,6 +73,10 @@ public class ProgArgs {
             case "decrypt":
                 encrypt = false;
                 return true;
+            case "connectionless":
+            case "cless":
+                connectionless = true;
+                return true;
         }
 
         return false;
@@ -108,4 +114,6 @@ public class ProgArgs {
     public String getAddress() { return address; }
     public int getPort() { return port; }
     public boolean isEncrypt() { return encrypt; }
+    public boolean isConnectionless() { return connectionless; }
+
 }

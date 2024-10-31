@@ -1,4 +1,4 @@
-package net.emullen;
+package net.emullen.Socketed;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,9 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.InetSocketAddress;
 import java.net.Socket;
+
+import net.emullen.Message;
+import net.emullen.ProgArgs;
 
 /** The client forms a standard Socket. It sends a message to the server and then waits for a
  *    response, finally exiting once this cycle is complete. */
